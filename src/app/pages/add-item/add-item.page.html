@@ -1,0 +1,24 @@
+<ion-header text-center>
+  <ion-toolbar>
+    <ion-title>Add Item</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-item class="margin-top" > 
+        <ion-label position="floating">Floating Label</ion-label>
+        <ion-input  [(ngModel)]="itemText" ></ion-input>
+        <ion-button  (click)="addItem()" [disabled]="itemText.length == 0" slot="end">Add</ion-button>
+
+      </ion-item>
+      
+     <ion-item mode='ios' *ngFor="let item of items">
+
+        {{item.edit}}
+        <ion-input  [readonly]="item.edit" [value]="item.text"></ion-input>
+         <ion-button  (click)="item.edit = !item.edit"  slot="end">{{item.edit ?'Edit':'save'}}</ion-button>
+         <ion-button  (click)="deleteItem(item)" color="danger" slot="end">Delete</ion-button>
+     </ion-item>
+
+</ion-content>
