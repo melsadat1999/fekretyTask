@@ -10,6 +10,6 @@ export class HttpService {
    return this.http.get<T>(this._url + url)
   }
   post<T>(url:any,object:any){
-    return this.http.post<T>(this._url + url,object)
+    return this.http.post<T>(this._url + url ,object)
   }
 }
