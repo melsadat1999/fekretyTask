@@ -12,7 +12,7 @@ export class AddItemPage  {
   constructor(public _http:HttpService) { }
  addItem(){
    let prams ={
-     id:0,
+    id:0,
     text:this.itemText,
     edit:true
   }
