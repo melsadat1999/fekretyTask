@@ -1,0 +1,23 @@
+ion-card-title{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+ion-card-content {
+
+    ion-item {
+        --border-color: #fff;
+        --border-width: none;
+        --padding-start: 0;
+        ion-text {
+            max-height: 73px;
+            overflow: hidden;
+        }
+    }
+
+    ion-avatar {
+        margin: 0;
+        width: 80px;
+        height: 80px;
+    }
+}

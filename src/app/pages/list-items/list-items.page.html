@@ -1,9 +1,23 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>ListItems</ion-title>
+<ion-header class="ion-text-center">
+  <ion-toolbar color="success">
+    <ion-title>List Items</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-card *ngFor="let item of items" (click)="presentModal(item)">
+    <ion-card-header >
+      <ion-card-subtitle></ion-card-subtitle>
+      <ion-card-title>{{item.title}}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+     <ion-item>
+        <ion-avatar slot="start" >
+            <img src="assets/avatar6.png">
+          </ion-avatar>
+          <ion-text slot="end"> {{item.body}}</ion-text>
+     </ion-item>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

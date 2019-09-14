@@ -1,41 +1,31 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { TabsPage } from './tabs.page';
+import { NgModule } from "@angular/core";
+import { RouterModule, Routes } from "@angular/router";
+import { TabsPage } from "./tabs.page";
 
 const routes: Routes = [
   {
-    path: 'tabs',
+    path: "tabs",
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
+        path: "add-item",
         children: [
-          {
-            path: '',
-            loadChildren: () => import('../pages/add-item/add-item.module').then(m => m.AddItemPageModule)
-          }
+          {path: "", loadChildren: () => import("../pages/add-item/add-item.module").then( m => m.AddItemPageModule)}
         ]
       },
       {
-        path: 'tab2',
+        path: "list-items",
         children: [
-          {
-            path: '',
-            loadChildren: () => import('../tab2/tab2.module').then(m => m.Tab2PageModule)
-          }
+          { path: "",loadChildren: () =>  import("../pages/list-items/list-items.module").then(m => m.ListItemsPageModule)}
         ]
       },
-      {
-        path: '',
-        redirectTo: '/tabs/tab1',
-        pathMatch: 'full'
-      }
+      { path: "", redirectTo: "/tabs/add-item", pathMatch: "full"}
     ]
   },
   {
-    path: '',
-    redirectTo: '/tabs/tab1',
-    pathMatch: 'full'
+    path: "",
+    redirectTo: "/tabs/add-item",
+    pathMatch: "full"
   }
 ];
 
@@ -43,4 +33,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class TabsPageRoutingModule { }
+export class TabsPageRoutingModule {}
