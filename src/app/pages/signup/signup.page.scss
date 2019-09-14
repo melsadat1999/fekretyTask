@@ -2,6 +2,31 @@ ion-button{
     width: 90%;
     margin: 70px auto;
 }
-form{
-    margin-top: 35px;
+
+
+.imgs{
+    width: 150px;
+    height: 150px;
+    margin: 20px auto 0;
+    border: 2px dashed #ddd;
+    border-radius: 50%;
+    ion-icon{
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+        font-size: 60px;
+        color: #ddd;
+        margin-top: 20px;
+    }
+    ion-text{
+        line-height: 30px;
+        text-align: center;
+        display: block;
+        color: rgb(141, 140, 140);
+            }
+    img{
+        width: 100%;
+        height: 100%;
+      
+    }
 }
