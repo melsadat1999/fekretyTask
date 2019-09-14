@@ -1,5 +1,7 @@
 {
   "name": "fekretyTask",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
