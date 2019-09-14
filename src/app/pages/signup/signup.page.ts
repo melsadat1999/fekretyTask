@@ -10,7 +10,7 @@ import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 })
 export class SignupPage {
   image:any;
-  private  registerForm: FormGroup;
+  registerForm: FormGroup;
   constructor(private formBuilder: FormBuilder,private router: Router,private camera: Camera) {
     this.registerForm = this.formBuilder.group({
       fullName: ['', Validators.required],
