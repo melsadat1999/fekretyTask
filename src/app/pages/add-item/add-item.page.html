@@ -1,16 +1,15 @@
-<ion-header text-center>
-  <ion-toolbar>
+<ion-header class="ion-text-center">
+  <ion-toolbar color="success">
     <ion-title>Add Item</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
-    <ion-item class="margin-top" > 
+    <ion-item class="ion-margin-top"> 
         <ion-label position="floating">Floating Label</ion-label>
         <ion-input  [(ngModel)]="itemText" ></ion-input>
         <ion-button  (click)="addItem()" [disabled]="itemText.length == 0" slot="end">Add</ion-button>
-
       </ion-item>
       
      <ion-item mode='ios' *ngFor="let item of items">

@@ -1,0 +1,31 @@
+<ion-header  class="ion-text-center">
+  <ion-toolbar color="success">
+    <ion-title>Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h2 class="ion-text-center">Give Feedback</h2>
+  <ion-item>
+    <ion-avatar slot="start" >
+      <img src="assets/avatar6.png">
+    </ion-avatar>
+     <p slot="end">{{data.title}}</p>
+  </ion-item>
+ <div class="icons ion-text-center">
+  <ion-icon color="warning" name="ios-star"></ion-icon>
+  <ion-icon  color="warning" name="ios-star"></ion-icon>
+  <ion-icon  color="warning" name="ios-star"></ion-icon>
+  <ion-icon name="ios-star"></ion-icon>
+  <ion-icon name="ios-star"></ion-icon>
+ </div>
+  <div class="Feedback">
+    <ion-label slot="block">Feedback</ion-label>
+    <ion-textarea placeholder="Feedback"></ion-textarea>
+  </div>
+  <ion-button  color="success" shape="round" type="Submit" (click)="close()"  expand="block">Send</ion-button>
+
+
+
+
+</ion-content>

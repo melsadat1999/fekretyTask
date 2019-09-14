@@ -1,31 +1,33 @@
-<ion-header text-center>
+<ion-header class="ion-text-center">
   <ion-toolbar color="success">
     <ion-title>signup</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <form>
+  <form [formGroup]="registerForm" >
     <ion-item>
       <ion-label position="floating">Full Name</ion-label>
-      <ion-input></ion-input>
+      <ion-input formControlName="fullName"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating">Birthday</ion-label>
-      <ion-input></ion-input>
+
+      <ion-datetime formControlName="birthday" displayFormat="MMMM YY" min="1989-06-04" value="1994-12-15T13:47:20.789"></ion-datetime>
+
     </ion-item>
     <ion-item>
       <ion-label position="floating">Email</ion-label>
-      <ion-input></ion-input>
+      <ion-input formControlName="email"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">Phone Number</ion-label>
-      <ion-input></ion-input>
+      <ion-label position="floating">PhoneNumber</ion-label>
+      <ion-input type="number" formControlName="phoneNumber"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating">Location/Address</ion-label>
-      <ion-input></ion-input>
+      <ion-input formControlName="address"></ion-input>
     </ion-item>
-    <ion-button color="success" shape="round" expand="block">Next</ion-button>
+    <ion-button [disabled]="registerForm.invalid" routerLink="/tabs/add-item" color="success" shape="round" type="Submit"  expand="block">Next</ion-button>
   </form>
 </ion-content>
